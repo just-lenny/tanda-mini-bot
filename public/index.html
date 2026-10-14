@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07130f">
+  <meta name="description" content="Pair your WhatsApp with Tanda Mini Bot in a few simple steps.">
+  <title>Tanda Mini Bot — WhatsApp Pairing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Tanda Mini Bot home">
+        <span class="brand-mark">T</span>
+        <span><strong>TANDA</strong><small>MINI BOT</small></span>
+      </a>
+      <div class="status-pill"><span class="status-dot"></span><span id="serviceStatus">Checking service</span></div>
+    </header>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="spark">✦</span> WHATSAPP AUTOMATION, SIMPLIFIED</div>
+        <h1>Your WhatsApp.<br><span>Connected.</span></h1>
+        <p class="intro">Pair your phone with Tanda Mini Bot and try the available commands directly in WhatsApp. No website account required.</p>
+        <div class="feature-row">
+          <div class="feature"><span class="feature-icon">⌁</span><span><b>Quick pairing</b><small>Link with a code</small></span></div>
+          <div class="feature"><span class="feature-icon">◈</span><span><b>Session storage</b><small>Supabase-backed</small></span></div>
+        </div>
+      </div>
+      <div class="bot-art" role="img" aria-label="Stylized anime-inspired bot mascot">
+        <div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div>
+        <div class="art-glow"></div>
+        <div class="mascot">
+          <div class="hair hair-back"></div><div class="face">
+            <div class="hair hair-top"></div><div class="fringe"></div>
+            <div class="eye eye-left"><i></i></div><div class="eye eye-right"><i></i></div>
+            <div class="blush blush-left"></div><div class="blush blush-right"></div>
+            <div class="smile"></div>
+          </div>
+          <div class="hoodie"><div class="hoodie-line"></div><div class="hoodie-symbol">T</div></div>
+          <div class="ear ear-left"></div><div class="ear ear-right"></div>
+        </div>
+        <div class="art-tag tag-top">TANDA // ONLINE</div><div class="art-tag tag-bottom">MADE IN KENYA ✦</div>
+      </div>
+    </section>
+    <section class="workspace">
+      <div class="panel pairing-panel">
+        <div class="panel-heading"><div><span class="step-label">STEP 01</span><h2>Pair your phone</h2></div><span class="panel-symbol">⌁</span></div>
+        <p class="muted">Use your WhatsApp number with the country code. For Kenya, start with <b>254</b> and omit the leading zero.</p>
+        <form id="pairForm">
+          <label for="phone">WhatsApp phone number</label>
+          <div class="phone-input"><span>＋</span><input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="2547XXXXXXXX" minlength="8" maxlength="16" required></div>
+          <button id="pairButton" type="submit"><span>Generate pairing code</span><span class="button-arrow">↗</span></button>
+        </form>
+        <div id="result" class="result hidden" aria-live="polite"></div>
+        <div class="steps">
+          <div class="step"><span>1</span><p>Open WhatsApp on your phone.</p></div>
+          <div class="step"><span>2</span><p>Go to <b>Settings → Linked devices</b>.</p></div>
+          <div class="step"><span>3</span><p>Tap <b>Link a device</b>, then choose <b>Link with phone number instead</b>.</p></div>
+          <div class="step"><span>4</span><p>Enter the pairing code shown above.</p></div>
+        </div>
+      </div>
+      <aside class="panel side-panel">
+        <div class="panel-heading"><div><span class="step-label">STEP 02</span><h2>Try a command</h2></div><span class="panel-symbol">⌘</span></div>
+        <p class="muted">Once connected, message your own WhatsApp chat or another chat with one of these commands.</p>
+        <div class="command-list">
+          <div><code>.menu</code><span>Open the command menu</span><button class="copy" data-copy=".menu" aria-label="Copy menu command">⧉</button></div>
+          <div><code>.help</code><span>Get help</span><button class="copy" data-copy=".help" aria-label="Copy help command">⧉</button></div>
+          <div><code>.ping</code><span>Test bot response</span><button class="copy" data-copy=".ping" aria-label="Copy ping command">⧉</button></div>
+          <div><code>.info</code><span>Bot information</span><button class="copy" data-copy=".info" aria-label="Copy info command">⧉</button></div>
+          <div><code>.owner</code><span>Creator information</span><button class="copy" data-copy=".owner" aria-label="Copy owner command">⧉</button></div>
+          <div><code>.status</code><span>Connection status</span><button class="copy" data-copy=".status" aria-label="Copy status command">⧉</button></div>
+        </div>
+        <div class="notice"><span>ⓘ</span><p>Keep your pairing code private. Anyone who links your WhatsApp session may be able to act as your account.</p></div>
+      </aside>
+    </section>
+    <section class="bottom-strip">
+      <div><span class="live-indicator"></span><span id="runtimeText">Service status loads automatically</span></div>
+      <span>Sessions stored by Supabase</span>
+    </section>
+    <footer><span>© 2026 Tanda Mini Bot</span><span>Built by <b>Lenny Muriuki</b> · <b>Deçan Techs</b></span></footer>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "tanda-mini-bot",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Tanda Mini Bot WhatsApp pairing service with Supabase-backed sessions",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^7.0.0-rc.9",
+    "express": "^5.2.1",
+    "pino": "^9.6.0"
+  }
+}
